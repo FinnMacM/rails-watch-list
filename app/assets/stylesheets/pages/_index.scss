@@ -1,0 +1,85 @@
+// Import page-specific CSS files here.
+@import "home";
+
+// Custom styles for flex items
+// Enhancing the overall container and list items
+.container {
+  margin-top: 2rem; // Adds some top margin to the container
+
+  h1 {
+    margin-bottom: 2rem; // Adds bottom margin to the heading
+    text-align: center; // Centers the heading
+  }
+}
+
+// Styling for the movie list cards
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); // Adds shadow to cards for depth
+  transition: 0.3s; // Smooth transition for hover effect
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); // Enhances shadow on hover for a "lifted" effect
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    .card-title {
+      color: #007bff; // Sets a specific color for the card title
+      text-align: center; // Centers the card title
+    }
+
+    .card-text {
+      padding: 1rem; // Adds padding inside the card body for spacing
+      background-color: #f8f9fa; // A light background color for the card text area
+      border-radius: 0 0 5px 5px; // Rounds the bottom corners of the card text area
+    }
+  }
+}
+
+// Overrides for .p-2 and .border moved into .card and .card-body for consistency
+.p-2 {
+  min-width: 200px; // Ensures flex items have a minimum width
+  padding: 10px; // Adjusts padding for spacing around items
+}
+
+.border {
+  border: 1px solid black; // Defines the border style for elements needing it
+}
+
+// Movie list specific styles
+.movie-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; // Adjusts spacing between list items
+}
+
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; // Set a fixed width for each movie item
+}
+
+.movie-title {
+  // background-color: #007bff; // Nice color for the background
+  color: black; // Text color
+  padding: 5px 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px; // Spacing between the title and the poster
+  border-radius: 5px; // Optional: adds rounded corners to the background
+}
+
+.movie-poster {
+  width: 100%; // Makes the image responsive within the fixed width of the movie item
+  height: auto;
+  object-fit: cover;
+}
