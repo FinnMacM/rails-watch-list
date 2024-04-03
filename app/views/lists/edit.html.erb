@@ -1,8 +1,7 @@
-<h1>My Movie Lists</h1>
+<h1>Edit Movie List</h1>
+
 <%= simple_form_for(@list, html: { multipart: true }) do |f| %>
   <%= f.input :name %>
   <%= f.input :image, as: :file %>
-  <%= f.button :submit %>
+  <%= f.button :submit, "Update List" %>
 <% end %>
-
-<%= link_to "Back to Home Page", lists_path, class: "btn btn-primary" %>
